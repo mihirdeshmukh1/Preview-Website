@@ -14,7 +14,7 @@
     "postCreateCommand": "cd /workspaces/Preview-Website && npm run install-all",
     "postStartCommand": "cd /workspaces/Preview-Website/raaghu-react/raaghu-pages && npm run dev",
     "portsAttributes": {
-      "3000": {
+      "5173": {
         "label": "Application",
         "onAutoForward": "openBrowser"
       }
