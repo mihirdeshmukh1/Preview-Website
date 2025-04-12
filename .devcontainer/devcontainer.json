@@ -1,40 +1,11 @@
 {
-    "name": "Raaghu React Preview",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "ms-vscode.vscode-typescript-next"
-            ],
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "bash",
-                "terminal.integrated.profiles.linux": {
-                    "bash": {
-                        "path": "bash",
-                        "icon": "terminal-bash"
-                    }
-                }
-            }
-        },
-        "codespaces": {
-            "openFiles": [
-                "raaghu-react/raaghu-pages/src/App.tsx"
-            ]
-        }
-    },
-    "forwardPorts": [
-        3000
-    ],
-    "onCreateCommand": "chmod +x ./.devcontainer/startup.sh",
-    "updateContentCommand": "echo 'Container content updated'",
-    "postCreateCommand": "bash ./.devcontainer/startup.sh",
-    "waitFor": "postCreateCommand",
-    "portsAttributes": {
-        "3000": {
-            "label": "Application",
-            "onAutoForward": "openBrowser"
-        }
+  "name": "Raaghu React Preview",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openBrowser"
     }
+  }
 }
