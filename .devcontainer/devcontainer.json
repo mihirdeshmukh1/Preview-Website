@@ -10,7 +10,7 @@
         ]
       }
     },
-    "forwardPorts": [3000],
+    "forwardPorts": [5173],
     "postCreateCommand": "cd /workspaces/Preview-Website && npm run install-all",
     "postStartCommand": "cd /workspaces/Preview-Website/raaghu-react/raaghu-pages && npm run dev",
     "portsAttributes": {
