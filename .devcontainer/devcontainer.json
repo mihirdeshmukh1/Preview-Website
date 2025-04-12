@@ -2,22 +2,21 @@
     "name": "Raaghu React Preview",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
     "customizations": {
-        "vscode": {
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "ms-vscode.vscode-typescript-next"
-            ]
-        }
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "ms-vscode.vscode-typescript-next"
+        ]
+      }
     },
-    "forwardPorts": [
-        3000
-    ],
-    "postCreateCommand": "bash ./.devcontainer/post-create.sh",
+    "forwardPorts": [3000],
+    "postCreateCommand": "cd /workspaces/Preview-Website && npm run install-all",
+    "postStartCommand": "cd /workspaces/Preview-Website/raaghu-react/raaghu-pages && npm run dev",
     "portsAttributes": {
-        "3000": {
-            "label": "Application",
-            "onAutoForward": "openPreview"
-        }
+      "3000": {
+        "label": "Application",
+        "onAutoForward": "openBrowser"
+      }
     }
-}
+  }
