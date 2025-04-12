@@ -3,7 +3,7 @@ const path = require('path');
 const chokidar = require('chokidar');
 
 // Configuration
-const SOURCE_DIR = '/workspaces/Preview-Website/generated-code'; // Where AI-generated code will be placed
+const SOURCE_DIR = '/workspaces/Preview-Website/generated_code'; // Where AI-generated code will be placed
 const TARGET_DIR = '/workspaces/Preview-Website/raaghu-react/raaghu-pages/src'; // Where files should be copied to
 
 // Create source directory if it doesn't exist
