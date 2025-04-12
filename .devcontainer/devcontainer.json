@@ -7,17 +7,34 @@
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
                 "ms-vscode.vscode-typescript-next"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    }
+                }
+            }
+        },
+        "codespaces": {
+            "openFiles": [
+                "raaghu-react/raaghu-pages/src/App.tsx"
             ]
         }
     },
     "forwardPorts": [
         3000
     ],
-    "postCreateCommand": "bash ./.devcontainer/post-create.sh",
+    "onCreateCommand": "chmod +x ./.devcontainer/startup.sh",
+    "updateContentCommand": "echo 'Container content updated'",
+    "postCreateCommand": "bash ./.devcontainer/startup.sh",
+    "waitFor": "postCreateCommand",
     "portsAttributes": {
         "3000": {
             "label": "Application",
-            "onAutoForward": "openPreview"
+            "onAutoForward": "openBrowser"
         }
     }
 }
