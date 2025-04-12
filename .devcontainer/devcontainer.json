@@ -2,6 +2,10 @@
   "name": "Raaghu React Preview",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
   "forwardPorts": [3000],
+  "updateContentCommand": "echo 'Container ready'",
+  "postAttachCommand": {
+    "server": "bash -c 'cd /workspaces/Preview-Website && npm run install-all && cd raaghu-react/raaghu-pages && npm run dev'"
+  },
   "portsAttributes": {
     "3000": {
       "label": "Application",
